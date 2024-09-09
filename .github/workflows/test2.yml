@@ -1,0 +1,19 @@
+name: Backend Stage Deployment 预发布环境
+
+on:
+  pull_request:
+    types: [ closed ]
+    branches:
+      - release_stage
+  workflow_dispatch:
+
+jobs:
+  my-job:
+    name: My Job
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print a greeting
+        env:
+          LAST_NAME: Octocat
+        run: |
+          echo $LAST_NAME.
