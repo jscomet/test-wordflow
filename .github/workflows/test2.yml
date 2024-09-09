@@ -4,12 +4,12 @@ on:
   pull_request:
     types: [ closed ]
     branches:
-      - release_stage
+      - dev
   workflow_dispatch:
 
 jobs:
   my-job:
-    name: My Job
+    name: My Job2
     runs-on: ubuntu-latest
     steps:
       - name: Print a greeting
